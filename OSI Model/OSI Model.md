@@ -35,6 +35,7 @@ The **OSI (Open Systems Interconnection) model** is a conceptual framework used 
 **2. Data Link Layer (Layer 2)**
 
 **Function:**
+
 •	Responsible for **error detection, correction, and framing** of data.
 
 •	Ensures **reliable transmission** between devices in the same network.
