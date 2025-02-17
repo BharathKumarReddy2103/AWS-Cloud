@@ -63,6 +63,6 @@ aws-zero-to-hero/
 
 📬 Have questions or suggestions? Feel free to reach out.
 
-🔗 LinkedIn (www.linkedin.com/in/bharath-kumar-reddy2103)
+🔗 **LinkedIn** (www.linkedin.com/in/bharath-kumar-reddy2103)
 
 🚀 **Let's build scalable and resilient AWS architectures together**
