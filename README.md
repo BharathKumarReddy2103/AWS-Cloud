@@ -12,8 +12,6 @@ This repository covers essential AWS concepts and services used in DevOps, inclu
 
 ✅ **Kubernetes on AWS** – EKS, Helm, ArgoCD, Kustomize
 
-✅ **Kubernetes on AWS** – EKS, Helm, ArgoCD, Kustomize
-
 ✅ **Serverless & Automation** – AWS Lambda, Step Functions, EventBridge
 
 ✅ **Networking & Security** – VPC, IAM, Security Groups, WAF, AWS Config
