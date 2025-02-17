@@ -57,6 +57,8 @@ aws-zero-to-hero/
 
 🔹 Submit a **Pull Request (PR)** with your changes
 
+---
+
 📢 **Connect With Me**
 
 📬 Have questions or suggestions? Feel free to reach out.
