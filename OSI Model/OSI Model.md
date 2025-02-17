@@ -111,6 +111,7 @@ The **OSI (Open Systems Interconnection) model** is a conceptual framework used 
 **Key Features:**
 
 •	Uses two major protocols:
+
 **1.	TCP (Transmission Control Protocol)** - Reliable, connection-oriented (e.g., HTTP, FTP).
   
 **2.	UDP (User Datagram Protocol)** - Fast, connectionless (e.g., VoIP, DNS).
