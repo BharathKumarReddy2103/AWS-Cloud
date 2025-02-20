@@ -4,7 +4,8 @@ VPC Peering is a **networking connection between two Virtual Private Clouds (VPC
 
 **How VPC Peering Works**
 
-•	VPC Peering is **non-transitive**, meaning if **VPC A is peered with VPC B, and VPC B is peered with VPC C**, traffic from VPC A cannot reach VPC C unless there is a direct peering connection.
+•	VPC Peering is **non-transitive**, meaning if **VPC A is peered with VPC B, and VPC B is peered with VPC C**, traffic from VPC A cannot reach VPC C unless there is a 
+  direct peering connection.
 
 •	It is **low-latency and high-bandwidth** since the traffic stays within AWS’s private network.
 
