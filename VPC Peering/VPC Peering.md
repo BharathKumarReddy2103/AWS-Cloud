@@ -23,7 +23,7 @@ VPC Peering is a **networking connection between two Virtual Private Clouds (VPC
 
 ---
 
-**Deep Dive into VPC Peering**
+**VPC Peering Deep Dive**
 
 1.	**Network Design Considerations**
 
