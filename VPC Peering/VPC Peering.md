@@ -11,6 +11,28 @@ VPC Peering is a **networking connection between two Virtual Private Clouds (VPC
 
 •	Each VPC involved must **manually configure routing tables** to allow communication.
 
+---
+
+**VPC Peering Architecture**
+
+Below is a high-level architecture diagram illustrating a **VPC Peering setup between two VPCs**:
+
+```bash
++-------------------+          +-------------------+
+|    VPC-1         |          |    VPC-2         |
+|  10.0.0.0/16     |          |  192.168.0.0/16  |
+|                 |            |                 |
+| +-------------+ |  Peering   | +-------------+ |
+| |  EC2 App   | | <---------> | |  EC2 DB    | |
+| +-------------+ | Connection | +-------------+ |
+|                 |            |                 |
++-----------------+            +-----------------+
+
+  Route Tables:
+  - VPC-1 routes 192.168.0.0/16 to VPC-2
+  - VPC-2 routes 10.0.0.0/16 to VPC-1
+```
+
 **Key Components of VPC Peering**
 
 1.	**Requester VPC** – The VPC that initiates the peering request.
@@ -78,6 +100,35 @@ The **staging and production environments need access to a shared database in th
 
 •	This setup **improves security and reduces costs** compared to using a VPN or internet-based communication.
 
+**Architecture Diagram for Real-World Use Case**
+
+```bash
++-------------------+          +-------------------+
+|   Dev VPC        |          |   Staging VPC     |
+|  10.0.0.0/16     |          |  172.16.0.0/16    |
+|                 |            |                 |
+| +-------------+ |            | +-------------+ |
+| |  Dev EC2   | |            | |  Staging EC2| |
+| +-------------+ |            | +-------------+ |
+|                 |            |                 |
++-----------------+            +-----------------+
+           |                            |
+           | (No direct peering)        |  
+           |                            |
+           v                            v
++-------------------+         +-------------------+
+|   Production VPC  |         |  Shared Database  |
+|  192.168.0.0/16  | <------> |   RDS / EC2 DB   |
+|                 |   Peering |                 |
+| +-------------+ |  Connection | +-------------+ |
+| |  Prod EC2  | | <---------> | |  Database   | |
+| +-------------+ |            | +-------------+ |
++-----------------+            +-----------------+
+
+Route Tables:
+- Staging VPC routes 192.168.0.0/16 to Production VPC
+- Production VPC routes 172.16.0.0/16 to Staging VPC
+```
 ---
 
 **Alternatives to VPC Peering**
