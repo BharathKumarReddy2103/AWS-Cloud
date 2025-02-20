@@ -33,7 +33,8 @@ VPC Peering is a **networking connection between two Virtual Private Clouds (VPC
 
 **2.	Transitive Peering Limitation**
 
-       o	VPC Peering does not support **transitive routing**. If multiple VPCs need to communicate, you must create a direct peering connection between each pair.
+       o	VPC Peering does not support **transitive routing**. If multiple VPCs need to communicate, you must create a 
+          direct peering connection between each pair.
 
 **3.	Billing & Cost Consideration**
    
