@@ -55,6 +55,7 @@ VPC Peering is a **networking connection between two Virtual Private Clouds (VPC
 **Scenario: Connecting Dev, Staging, and Production VPCs**
 
 A company has three environments:
+
 •	**Development VPC** (dev-vpc)
 
 •	**Staging VPC** (staging-vpc)
