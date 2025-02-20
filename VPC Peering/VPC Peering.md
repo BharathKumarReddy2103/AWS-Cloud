@@ -33,16 +33,17 @@ VPC Peering is a **networking connection between two Virtual Private Clouds (VPC
 
 2.	**Transitive Peering Limitation**
 
-       o	VPC Peering does not support **transitive routing**. If multiple VPCs need to communicate, you must create a 
+       o	VPC Peering does not support **transitive routing**. If multiple VPCs need to communicate, you must create a
+  	
           direct peering connection between each pair.
 
-3.	**Billing & Cost Consideration**
+4.	**Billing & Cost Consideration**
    
       o	Data transfer **within the same region** via VPC Peering is cheaper than sending data over the internet.
 
       o	Inter-region data transfer has **higher costs**, similar to AWS Direct Connect or AWS Transit Gateway.
 
-4.	**Security & Access Control**
+5.	**Security & Access Control**
 
       o	Security Groups and Network ACLs must allow inbound and outbound traffic.
 
