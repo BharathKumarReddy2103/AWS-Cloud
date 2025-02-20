@@ -27,7 +27,7 @@ VPC Peering is a **networking connection between two Virtual Private Clouds (VPC
 
 **1.	Network Design Considerations**
 
-      o	VPC Peering can be used **within the same AWS region or across different AWS regions** (Inter-Region VPC Peering).
+      o	VPC Peering can be used within the same AWS region or across different AWS regions (Inter-Region VPC Peering).
 
       o	Overlapping CIDR blocks are not allowed – The two VPCs must have different IP address ranges.
 
