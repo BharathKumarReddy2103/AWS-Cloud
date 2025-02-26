@@ -50,24 +50,6 @@ o	Mapping custom domains to AWS CloudFront, ELB, or S3 buckets.
 
 •	Cannot be used at the root domain (example.com)—only for subdomains.
 
-**3. CNAME Record (Canonical Name Record)**
-
-•	**Purpose**: Creates an alias from one domain name to another.
-
-•	**Example**:
-
-o	www.example.com → example.com
-
-•	**Use Case**:
-
-o	Redirecting subdomains to the main domain.
-
-o	Mapping custom domains to AWS CloudFront, ELB, or S3 buckets.
-
-**Limitations**:
-
-•	Cannot be used at the root domain (example.com)—only for subdomains.
-
 **4. MX Record (Mail Exchange Record)**
 
 •	**Purpose**: Directs email to mail servers.
