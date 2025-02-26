@@ -261,7 +261,7 @@ o	Helps in ENUM-based DNS resolutions.
 
 **Best Practices for AWS DNS Management**
 
-1.	**Use ALIAS instead of CNAME** for AWS services like CloudFront, S3, and ELB to reduce latency.
+**1.	Use ALIAS instead of CNAME** for AWS services like CloudFront, S3, and ELB to reduce latency.
   
 **2.	Configure SPF, DKIM, and DMARC** for better email deliverability.
 
