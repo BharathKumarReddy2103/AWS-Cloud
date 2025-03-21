@@ -20,6 +20,7 @@ You enter `flipkart.com` in your browser. DNS resolves it to something like `3.6
 **Amazon Route 53** is AWS’s DNS-as-a-Service offering. Just as:
 - **EC2** provides compute-as-a-service
 - **EKS** provides Kubernetes-as-a-service
+
 **Route 53** offers DNS-as-a-service.
 
 It’s named after port 53, the port traditionally used for DNS requests.
