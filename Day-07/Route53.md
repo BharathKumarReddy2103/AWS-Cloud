@@ -1,4 +1,4 @@
-# Introduction to Amazon Route 53 – DNS as a Service on AWS
+# Amazon Route 53 – DNS as a Service on AWS
 
 Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service offered by AWS. This article is part of the "AWS Zero to Hero" series and is designed to provide DevOps and Cloud Engineers with a clear, concise, and professional understanding of how Route 53 works, why it's essential, and how it integrates with core AWS components.
 
