@@ -42,13 +42,13 @@ This secure layout ensures privacy and access control—just like how a VPC work
 
 Before VPC, AWS provisioned EC2 instances in shared networks. If one instance was compromised, others on the same server could also be at risk. VPC solved this by allowing customers to create their own isolated environments, improving:
 
-•	Security
+•	**Security**
 
-•	Scalability
+•	**Scalability**
 
-•	Custom Networking
+•	**Custom Networking**
 
-•	Compliance with regulations
+•	**Compliance with regulations**
 
 ---
 
