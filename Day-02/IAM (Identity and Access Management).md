@@ -256,4 +256,4 @@ In the next session, we’ll explore IAM Roles in more detail and apply them in 
 
 If you found this guide useful, share it with your peers or contribute to the GitHub repo to help others in their AWS journey.
 
-**Stay tuned and happy learning**
+**Stay tuned and happy learning.**
