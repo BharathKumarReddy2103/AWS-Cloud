@@ -129,56 +129,100 @@ ssh -i aws-key.pem ubuntu@<private-ip>
 **Step 5: Deploy Sample App**
 
 •	On private EC2, create a simple Python app:
+
+```sh
 echo "<html><h1>My First AWS App in Private Subnet</h1></html>" > index.html
 python3 -m http.server 8000
+```
+
 •	Only deploy this on one EC2 to observe load balancing effects.
-Step 6: Create Target Group
+
+**Step 6: Create Target Group**
+
 •	EC2 → Target Groups → Create
+
 •	Type: EC2 instances
+
 •	Port: 8000
+
 •	Attach both EC2s (only one has the app running)
-Step 7: Create Load Balancer
+
+**Step 7: Create Load Balancer**
+
 •	EC2 → Load Balancers → Create ALB
+
 •	Name: aws-prod-alb
+
 •	Scheme: Internet-facing
+
 •	Select public subnets
+
 •	Attach previously created security group (ensure port 80 is open)
+
 •	Add listener on port 80, forward to target group
-________________________________________
-Testing and Verification
-•	Wait until ALB is Active
+
+---
+
+**Testing and Verification**
+
+•	Wait until ALB is **Active**
+
 •	Access ALB DNS via browser:
+
+```sh
 http://<load-balancer-dns>
+```
+
 •	You should see the app running.
+
 •	Occasionally you may get a 5xx error — this means ALB hit the instance without the app (expected).
+
 •	Deploy app on both instances to fully utilize load balancing.
-________________________________________
-Best Practices and Tips
-•	Always use Bastion Hosts for accessing private EC2s securely.
-•	Enable detailed monitoring on Auto Scaling for better scaling decisions.
-•	Keep security groups restricted to necessary ports only.
-•	Use launch templates for reusability and better management.
-•	Use ALB health checks to route traffic to healthy instances only.
-•	Clean up resources post-demo to avoid unnecessary AWS billing.
-________________________________________
-Conclusion
-You’ve now built a production-grade AWS architecture from scratch using core AWS services. This real-time example showcases:
-•	Best practices in network isolation
-•	Use of NAT Gateway for secure internet access
-•	Auto Scaling for resilience and elasticity
-•	Load Balancing to ensure fault tolerance
-•	SSH security via Bastion hosts
+
+---
+
+**Best Practices and Tips**
+
+•	**Always use Bastion Hosts** for accessing private EC2s securely.
+
+•	**Enable detailed monitoring** on Auto Scaling for better scaling decisions.
+
+•	**Keep security groups restricted** to necessary ports only.
+
+•	**Use launch templates** for reusability and better management.
+
+•	**Use ALB health checks** to route traffic to healthy instances only.
+
+•	**Clean up resources** post-demo to avoid unnecessary AWS billing.
+
+---
+
+**Conclusion**
+
+You’ve now built a **production-grade AWS architecture** from scratch using core AWS services. This real-time example showcases:
+
+•	Best practices in **network isolation**
+
+•	Use of **NAT Gateway** for secure internet access
+
+•	**Auto Scaling** for resilience and elasticity
+
+•	**Load Balancing** to ensure fault tolerance
+
+•	**SSH security** via Bastion hosts
+
 This setup is ideal for hosting microservices, internal applications, and any secure cloud-native deployments in AWS.
-________________________________________
-Further Reading
-•	AWS VPC Documentation
-•	Best Practices for Auto Scaling
-•	Using a Bastion Host
-•	AWS Elastic Load Balancing
-________________________________________
-Call for Contributions
+
+---
+
+**Call for Contributions**
+
 If you found this guide helpful and want to contribute:
+
 •	Submit a PR with additional enhancements
+
 •	Suggest improvements or corrections in the issues tab
+
 •	Fork and adapt this architecture for your use case
+
 Let’s grow together as a community of DevOps Engineers
