@@ -159,6 +159,6 @@ You configure Route 53 to resolve app.mydomain.com to the Load Balancer's IP. In
 
 **Conclusion**
 
-Amazon Route 53 simplifies the traditionally complex process of managing DNS by offering a scalable, resilient, and deeply integrated service on AWS. Whether you're hosting a simple app or architecting a large-scale system, Route 53 enables reliable domain resolution and routing—making it a foundational component in modern cloud-native applications.
+**Amazon Route 53** simplifies the traditionally complex process of managing DNS by offering a scalable, resilient, and deeply integrated service on AWS. Whether you're hosting a simple app or architecting a large-scale system, Route 53 enables reliable domain resolution and routing—making it a foundational component in modern cloud-native applications.
 
 In the next part of this series, we will implement a full-fledged project using Route 53, VPC, and other AWS components to simulate real-world enterprise architecture.
