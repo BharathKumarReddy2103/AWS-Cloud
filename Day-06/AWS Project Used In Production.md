@@ -115,7 +115,7 @@ Here's the high-level flow of the architecture:
 - SSH into Bastion, then use SCP to copy the `.pem` file
 - From Bastion, SSH into private EC2 instances
 
-```bash
+```sh
 # From local machine to Bastion
 scp -i ~/.ssh/aws-key.pem aws-key.pem ubuntu@<bastion-ip>:~
 
@@ -124,7 +124,10 @@ ssh -i ~/.ssh/aws-key.pem ubuntu@<bastion-ip>
 
 # From Bastion to Private EC2
 ssh -i aws-key.pem ubuntu@<private-ip>
-Step 5: Deploy Sample App
+```
+
+**Step 5: Deploy Sample App**
+
 •	On private EC2, create a simple Python app:
 echo "<html><h1>My First AWS App in Private Subnet</h1></html>" > index.html
 python3 -m http.server 8000
