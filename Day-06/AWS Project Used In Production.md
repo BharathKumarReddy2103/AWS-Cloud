@@ -30,9 +30,6 @@ Here's the high-level flow of the architecture:
 - **Private subnets** host the **application EC2 instances**, which do not have public IPs.
 - Internet users access the application through the **ALB**.
 - Outbound internet traffic from EC2s in private subnets is routed via the **NAT Gateway**.
-  
-![AWS Architecture Diagram](https://d1.awsstatic.com/diagrams/AWS_Public_Private_Subnet_Architecture.c1cd4067c5cdb2ad0558375e49e68f1dbd3db517.png)  
-*Source: AWS Architecture Blog*
 
 ---
 
