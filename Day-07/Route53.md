@@ -38,10 +38,12 @@ Users never access applications via IP addresses directly. Instead, a domain nam
 
 **Traffic Flow Example:**
 
+```sh
 User -> Domain (e.g., app.example.com) 
      -> Route 53 
      -> Load Balancer 
      -> Application in Private Subnet
+```
 
 ---
 
