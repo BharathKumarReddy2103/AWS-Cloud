@@ -1,4 +1,4 @@
-# Mastering AWS CLI: Automate AWS Infrastructure Like a Pro
+# AWS CLI: Automate AWS Infrastructure Like a Pro
 
 Welcome to Day 10 of the **AWS Zero to Hero** series. In this guide, we’ll explore one of the most essential tools every DevOps and Cloud engineer must know—**AWS CLI (Command Line Interface)**.
 
