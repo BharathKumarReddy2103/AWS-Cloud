@@ -202,6 +202,6 @@ AWS S3 offers multiple storage classes optimized for different use cases:
 
 **Conclusion**
 
-Amazon S3 is a foundational service in AWS that every DevOps and Cloud Engineer must master. Its simplicity, scalability, and global accessibility make it an ideal solution for a variety of storage needs — from backups to websites to logs.
+**Amazon S3** is a foundational service in AWS that every DevOps and Cloud Engineer must master. Its simplicity, scalability, and global accessibility make it an ideal solution for a variety of storage needs — from backups to websites to logs.
 
 By implementing proper security, versioning, and cost management strategies, you can build robust and compliant storage solutions at scale.
