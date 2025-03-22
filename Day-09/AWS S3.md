@@ -8,7 +8,8 @@ Welcome to Day 9 of the **AWS Zero to Hero** series. In this guide, we take a de
 
 **Amazon S3** is an **object storage service** that provides industry-leading scalability, availability, durability, and performance. Whether you're storing application logs, backup dumps, static assets, or entire websites, S3 is designed to handle it all — cost-effectively and securely.
 
-S3 = Simple Storage Service
+**S3 = Simple Storage Service**
+
 It was one of the first services launched by AWS and remains a cornerstone of cloud-based storage solutions.
 
 ---
