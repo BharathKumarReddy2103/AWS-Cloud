@@ -209,4 +209,4 @@ If you're serious about cloud engineering, **learning AWS CLI is non-negotiable*
 
 **Next Up**: Learn AWS CloudFormation Templates and understand how CLI compares to Terraform and CDK for large-scale deployments.
 
-If you found this guide helpful, please consider sharing it, giving the repo a star, and following for more DevOps and Cloud engineering tutorials.
+**If you found this guide helpful, please consider sharing it, giving the repo a star, and following for more DevOps and Cloud engineering tutorials.**
