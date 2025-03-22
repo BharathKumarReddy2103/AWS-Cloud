@@ -53,12 +53,13 @@ Every AWS service exposes a set of **APIs** that allow developers and DevOps eng
 **Example:**
 Creating an S3 bucket via API:
 
-```http
+```sh
 POST https://api.aws.com/s3/create
 {
   "bucketName": "my-bucket",
   "versioning": true
 }
+```
 
 With AWS CLI:
 
