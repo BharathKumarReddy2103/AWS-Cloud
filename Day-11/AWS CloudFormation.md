@@ -8,7 +8,8 @@ This article is part of the AWS Zero to Hero series and is intended for DevOps e
 
 ---
 
-What is AWS CloudFormation?
+**What is AWS CloudFormation?**
+
 AWS CloudFormation is an infrastructure automation service that helps you define AWS resources using templates written in YAML or JSON. These templates are deployed as **stacks**, which represent a collection of AWS resources that can be created, updated, or deleted as a single unit.
 
 **Why Use CloudFormation?**
