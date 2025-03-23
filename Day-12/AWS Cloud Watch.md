@@ -185,3 +185,193 @@ Check your inbox or spam/promotions tab. You'll receive an email like:
 Make sure to not just understand the theory but also **practice demos**. This hands-on experience will prepare you for real-world scenarios and interviews.
 
 “Metrics tell you what’s happening. Alarms help you take action. Logs give you the why.”
+
+---
+
+**AWS CloudWatch Custom Metrics: Going Beyond Defaults**
+
+Follow-up to Day 12 of AWS Zero to Hero Series
+
+**Introduction**
+
+While AWS CloudWatch offers over 1000+ default metrics across various services, there are critical scenarios where those defaults aren’t enough—especially when you want to monitor application-specific parameters like **memory usage, disk space, or business KPIs.**
+
+That’s where **Custom Metrics** come in. With custom metrics, you can push your own monitoring data to AWS CloudWatch, opening doors to more granular and insightful observability across your applications and infrastructure.
+
+This guide explains what custom metrics are, why they're essential, how to implement them using Python, and best practices for DevOps Engineers.
+
+---
+
+**What Are Custom Metrics in AWS CloudWatch?**
+
+**Custom Metrics** are user-defined metrics that you manually push to CloudWatch from your applications or scripts.
+
+**Why Use Custom Metrics?**
+
+Default metrics don’t cover everything. For example:
+
+•	EC2 instances do **not** provide memory utilization by default.
+
+•	You might want to monitor **queue lengths, request durations, user sign-ups per hour,** etc.
+
+•	Application-specific metrics like **errors per second, cache hit ratio**, etc., are not tracked unless explicitly sent.
+
+---
+
+**Key Use Cases for Custom Metrics**
+
+•	**Memory Utilization on EC2**
+
+Track free/used memory not covered by default EC2 metrics.
+
+•	**Disk Usage**
+
+Monitor disk space used/free on Linux or Windows instances.
+
+•	**Business KPIs**
+
+E.g., Orders per minute, conversion rates, failed transactions.
+
+•	**Application Health**
+
+Track custom HTTP codes, response times, and error rates.
+
+---
+
+**How Custom Metrics Work**
+
+Custom metrics are pushed into CloudWatch using the **PutMetricData API**. You can send data:
+
+•	From your EC2 instances
+
+•	From Lambda functions
+
+•	From on-premise servers using the AWS CLI or SDK
+
+---
+
+**Step-by-Step Guide: Create Custom Metrics Using Python**
+
+**Prerequisites:**
+
+•	EC2 instance with **Python 3** and **boto3** installed
+
+•	IAM role attached with cloudwatch:PutMetricData permission
+
+•	AWS CLI configured
+
+**Step 1: Install Boto3**
+
+```sh
+pip install boto3
+```
+
+**Step 2: Python Script to Push Memory Usage as a Custom Metric**
+
+```sh
+# custom_memory_metric.py
+
+import boto3
+import psutil
+import time
+
+cloudwatch = boto3.client('cloudwatch', region_name='us-east-1')
+
+def publish_memory_usage():
+    memory = psutil.virtual_memory()
+    used_memory_percent = memory.percent
+
+    cloudwatch.put_metric_data(
+        Namespace='CustomEC2Metrics',
+        MetricData=[
+            {
+                'MetricName': 'MemoryUtilization',
+                'Dimensions': [
+                    {
+                        'Name': 'InstanceId',
+                        'Value': 'i-0abc123def456ghi'  # Replace with your EC2 instance ID
+                    },
+                ],
+                'Unit': 'Percent',
+                'Value': used_memory_percent
+            },
+        ]
+    )
+    print(f"Pushed memory utilization: {used_memory_percent}%")
+
+while True:
+    publish_memory_usage()
+    time.sleep(60)  # Push data every 1 minute
+```
+
+**Step 3: Run the Script**
+
+```sh
+python3 custom_memory_metric.py
+```
+
+This will push the memory utilization metric to CloudWatch every 60 seconds.
+
+---
+
+**View Custom Metrics in CloudWatch**
+
+**1.**	Go to the AWS Console → CloudWatch
+
+**2.**	Navigate to **Metrics** → Select **CustomEC2Metrics**
+
+**3.**	You’ll see MemoryUtilization under that namespace
+
+**4.**	You can now:
+
+o	Create dashboards
+
+o	Set alarms
+
+o	Visualize trends
+
+---
+
+**Set an Alarm on Custom Metric (Optional)**
+
+**1.**	Go to **Alarms** → Create Alarm
+
+**2.**	Choose CustomEC2Metrics > MemoryUtilization
+
+**3.**	Set a threshold (e.g., > 80%)
+
+**4.**	Choose an action (e.g., email via SNS)
+
+**5.**	Create and test your alarm
+
+---
+
+**Best Practices for Using Custom Metrics**
+
+•	**Use Namespaces Wisely**
+
+Group similar metrics under a consistent Namespace like CustomAppMetrics.
+
+•	**Use Dimensions**
+
+Add identifiers (e.g., InstanceId, Environment) for filtering and grouping.
+
+•	**Control Data Frequency**
+
+Avoid unnecessary data floods. CloudWatch charges per data point.
+
+•	**Optimize Cost**
+
+Use standard resolution (1-minute) for critical metrics. Avoid high-resolution unless required.
+
+•	**Clean Up**
+
+Remove scripts or automation pushing metrics when no longer needed.
+
+---
+
+**Conclusion**
+
+Custom metrics unlock the full potential of CloudWatch, especially when you're monitoring beyond what AWS offers out of the box. As a DevOps Engineer, mastering custom metrics gives you a competitive edge in handling real-world monitoring challenges.
+
+Start simple—track memory usage, disk space, or error counts—and gradually evolve your observability stack.
