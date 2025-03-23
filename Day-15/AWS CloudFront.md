@@ -171,4 +171,4 @@ ________________________________________
 ________________________________________
 **Conclusion**
 
-CloudFront, when combined with S3, forms a powerful architecture for delivering static content with speed, scalability, and security. Whether you’re building a blog, portfolio, or serving multimedia files, leveraging CDN is a cloud-native best practice every DevOps engineer should know.
+**CloudFront**, when combined with S3, forms a powerful architecture for delivering static content with speed, scalability, and security. Whether you’re building a blog, portfolio, or serving multimedia files, leveraging CDN is a cloud-native best practice every DevOps engineer should know.
