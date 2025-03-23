@@ -143,7 +143,7 @@ Example policy added automatically:
     "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity EXAMPLE"
   },
   "Action": "s3:GetObject",
-  "Resource": "arn:aws:s3:::tutorialswithpiyush.com/*"
+  "Resource": "arn:aws:s3:::tutorialswithbharath.com/*"
 }
 ```
 ________________________________________
