@@ -41,6 +41,7 @@ ________________________________________
 **Solution Architecture**
 
 We’ll use the following AWS services:
+
 •	**AWS Lambda**: For running Python scripts automatically.
 
 •	**Boto3**: AWS SDK for Python to interact with EC2 resources.
