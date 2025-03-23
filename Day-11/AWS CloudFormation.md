@@ -93,7 +93,7 @@ Outputs:
 
 ---
 
-**Practical Demo: Creating an S3 Bucket with CFT**
+**Practical Demo 1: Creating an S3 Bucket with CFT**
 
 Here’s how you can provision an S3 bucket using a CloudFormation template.
 
@@ -138,6 +138,146 @@ Outputs:
 •	Check that **versioning** is enabled in the bucket properties
 
 ---
+
+**Practical Demo 2: Creating an EC2 Instance Using AWS CloudFormation (CFT)**
+
+**Introduction**
+
+Amazon EC2 (Elastic Compute Cloud) is one of the most widely used services on AWS, offering scalable virtual servers in the cloud. Provisioning EC2 instances manually through the AWS Console or CLI can be repetitive and error-prone. This is where **AWS CloudFormation Templates (CFT)** come in.
+
+In this article, we’ll walk you through creating an EC2 instance using CloudFormation, explaining the key sections of the template, recommended practices, and how to deploy the template using the AWS Console.
+
+This article is ideal for DevOps Engineers and Cloud professionals looking to adopt Infrastructure as Code (IaC) for consistent, automated EC2 provisioning.
+
+---
+
+**Why Use CloudFormation to Provision EC2?**
+
+•	Automates and standardizes EC2 instance creation
+
+•	Supports version-controlled infrastructure
+
+•	Allows parameterization and reuse across environments
+
+•	Enables audits, rollback, and drift detection
+
+•	Simplifies integration into CI/CD pipelines
+
+---
+
+**Prerequisites**
+
+Before you begin, ensure that you have:
+
+•	An **AWS account**
+
+•	**IAM permissions** to create EC2 instances, key pairs, and security groups
+
+•	**Visual Studio Code** with the **YAML** and **AWS Toolkit** extensions (recommended)
+
+•	A **key pair** created in the region where you'll launch the instance
+
+---
+
+**CloudFormation Template to Launch an EC2 Instance**
+
+Below is a **sample YAML template** to create an EC2 instance using AWS CloudFormation:
+
+```sh
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation Template to create an EC2 instance in the default VPC
+
+Parameters:
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access
+    Type: AWS::EC2::KeyPair::KeyName
+  InstanceType:
+    Description: EC2 instance type
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t2.micro
+      - t2.small
+      - t2.medium
+    ConstraintDescription: Must be a valid EC2 instance type.
+  ImageId:
+    Description: AMI ID for the instance
+    Type: AWS::EC2::Image::Id
+    Default: ami-0c02fb55956c7d316  # Amazon Linux 2 in us-east-1
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyName
+      ImageId: !Ref ImageId
+      Tags:
+        - Key: Name
+          Value: CFT-EC2-Demo
+
+Outputs:
+  InstanceId:
+    Description: Instance ID of the created EC2 instance
+    Value: !Ref MyEC2Instance
+  PublicIP:
+    Description: Public IP address of the instance
+    Value: !GetAtt MyEC2Instance.PublicIp
+```
+
+---
+
+**Step-by-Step Deployment Using AWS Console**
+
+**Step 1: Save the Template**
+
+•	Save the above content in a file named ec2-instance.yaml.
+
+**Step 2: Upload to CloudFormation**
+
+**1.**	Login to the **AWS Console**
+
+**2.**	Navigate to **CloudFormation** service
+
+**3.**	Click **Create stack → With new resources (standard)**
+
+**4.**	Select **Upload a template file**
+
+**5.**	Upload ec2-instance.yaml
+
+**6.**	Click **Next**
+
+**Step 3: Configure Stack**
+
+•	Enter **Stack Name**: ec2-demo-stack
+
+•	Enter parameter values:
+
+o	**KeyName**: Use a valid key pair from your AWS region
+
+o	**InstanceType**: Choose t2.micro, t2.small, or t2.medium
+
+o	**ImageId**: Leave default or choose a valid AMI for your region
+
+**Step 4: Deploy Stack**
+
+•	Click **Next** through the remaining screens
+
+•	Acknowledge any IAM changes (if applicable)
+
+•	Click **Create Stack**
+
+---
+
+**Verify the Deployment**
+
+After the stack is created:
+
+•	Go to the **EC2 Dashboard**
+
+•	Locate the new instance (tagged as CFT-EC2-Demo)
+
+•	Check the **Public IP** and **Instance ID** (also visible in stack outputs)
 
 **Best Practices**
 
