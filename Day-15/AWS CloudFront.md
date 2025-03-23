@@ -72,7 +72,7 @@ In this demo, we:
 
 •	Go to the AWS S3 console.
 
-•	Create a bucket with the name matching your domain (e.g., tutorialswithpiyush.com).
+•	Create a bucket with the name matching your domain (e.g., tutorialswithbharath.com).
 
 •	Enable **Static Website Hosting**:
 
