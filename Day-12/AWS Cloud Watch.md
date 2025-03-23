@@ -190,7 +190,7 @@ Make sure to not just understand the theory but also **practice demos**. This ha
 
 **AWS CloudWatch Custom Metrics: Going Beyond Defaults**
 
-Follow-up to Day 12 of AWS Zero to Hero Series
+Follow-up to **above AWS CloudWatch article**
 
 **Introduction**
 
