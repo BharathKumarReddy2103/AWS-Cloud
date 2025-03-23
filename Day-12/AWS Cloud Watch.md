@@ -180,7 +180,7 @@ Check your inbox or spam/promotions tab. You'll receive an email like:
 
 **Conclusion**
 
-AWS CloudWatch is a foundational service for any DevOps or Cloud Engineer. From infrastructure health to application performance, it provides comprehensive observability features that integrate seamlessly with other AWS services.
+**AWS CloudWatch** is a foundational service for any DevOps or Cloud Engineer. From infrastructure health to application performance, it provides comprehensive observability features that integrate seamlessly with other AWS services.
 
 Make sure to not just understand the theory but also **practice demos**. This hands-on experience will prepare you for real-world scenarios and interviews.
 
