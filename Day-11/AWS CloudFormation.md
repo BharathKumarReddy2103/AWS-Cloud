@@ -279,6 +279,12 @@ After the stack is created:
 
 •	Check the **Public IP** and **Instance ID** (also visible in stack outputs)
 
+---
+
+**Real-World Use Case**
+
+A DevOps team needs to spin up test environments for every feature branch. Using a CloudFormation template like this, they can automate instance provisioning directly from their CI/CD pipeline (e.g., GitLab CI/CD, GitHub Actions, or Jenkins).
+
 **Best Practices**
 
 •	Use **YAML** over JSON for readability and comments
