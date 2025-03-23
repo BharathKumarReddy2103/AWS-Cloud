@@ -28,7 +28,7 @@ AWS CloudFront is a global CDN service that improves access speed and reduces la
 
 **Why Use a CDN Like CloudFront?**
 
-To understand the need for CloudFront, imagine an Instagram user in Australia uploading a video. Without a CDN, users in India would have to fetch that content directly from Instagram’s central servers—likely located in the US—resulting in latency due to the number of hops and routers involved.
+To understand the need for CloudFront, imagine an Instagram user in Newzealand uploading a video. Without a CDN, users in India would have to fetch that content directly from Instagram’s central servers—likely located in the US—resulting in latency due to the number of hops and routers involved.
 
 With CloudFront:
 
