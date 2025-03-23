@@ -1,6 +1,6 @@
 **AWS CloudFront:**
 
-In this tutorial, we explore how to optimize website delivery using **AWS CloudFront**—a powerful Content Delivery Network (CDN) service. We'll break down the theory of how CDNs work, why CloudFront is essential in a modern cloud architecture, and walk through a practical demo of integrating it with an S3 bucket to host a static website.
+In this tutorial, we explore how to optimize website delivery using **AWS CloudFront**—a powerful **Content Delivery Network (CDN)** service. We'll break down the theory of how CDNs work, why CloudFront is essential in a modern cloud architecture, and walk through a practical demo of integrating it with an S3 bucket to host a static website.
 
 **Table of Contents**
 
