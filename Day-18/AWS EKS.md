@@ -135,7 +135,7 @@ ________________________________________
 
 The complete step-by-step guide including configuration files and commands is available here:
 
-https://github.com/iam-veeramalla/aws-devops-zero-to-hero/tree/main/day-22
+(https://github.com/iam-veeramalla/aws-devops-zero-to-hero/tree/main/day-22)
 
 **1. Install Prerequisites**
 
