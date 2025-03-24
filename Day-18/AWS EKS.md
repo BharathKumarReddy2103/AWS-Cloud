@@ -98,6 +98,9 @@ We will deploy a classic 2048 game application on AWS EKS using the following co
 •	**Ingress**: Route external traffic into the cluster
 
 •	**ALB Controller**: Automatically creates and manages AWS ALB
+
+All the necessary manifests and commands are available in the GitHub repository:
+https://github.com/iam-veeramalla/aws-devops-zero-to-hero/tree/main/day-22
 ________________________________________
 **Understanding Kubernetes Ingress & ALB Controller**
 
