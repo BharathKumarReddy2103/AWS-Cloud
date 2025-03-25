@@ -205,7 +205,7 @@ resource "aws_instance" "web1" {
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.subnet_1.id
   vpc_security_group_ids = [aws_security_group.web_sg.id]
-  user_data              = file("user_data_abhi.sh")
+  user_data              = file("user_data_bharath.sh")
 }
 
 resource "aws_instance" "web2" {
@@ -213,7 +213,7 @@ resource "aws_instance" "web2" {
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.subnet_2.id
   vpc_security_group_ids = [aws_security_group.web_sg.id]
-  user_data              = file("user_data_cloud.sh")
+  user_data              = file("user_data_devops.sh")
 }
 ```
 ________________________________________
