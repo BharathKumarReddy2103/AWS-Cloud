@@ -187,6 +187,7 @@ You're working with a **firewall** or **VPN solution** from vendors like Palo Al
 **Cons:**
 
 •	Specific to niche use cases
+
 •	Not suitable for typical web or API traffic
 ________________________________________
 **Summary Comparison Table**
