@@ -188,7 +188,7 @@ apt install apache2 -y
 echo "Welcome to Bharath's Terraform Project" > /var/www/html/index.html
 ```
 
-In user_data_cloud.sh:
+In user_data_DevOps.sh:
 
 ```sh
 #!/bin/bash
