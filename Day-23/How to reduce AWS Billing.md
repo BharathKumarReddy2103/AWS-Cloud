@@ -64,15 +64,15 @@ Prefer using the command line? You can also identify resources using the **AWS C
 aws configure
 ```
 
-Provide your:
+o Provide your:
 
-Access key
+o Access key
 
-Secret key
+o Secret key
 
-Default region (e.g., ap-south-1)
+o Default region (e.g., ap-south-1)
 
-Output format (e.g., json)
+o Output format (e.g., json)
 
 **3.**	List resources in a region:
 
