@@ -179,7 +179,7 @@ resource "aws_security_group" "web_sg" {
 ________________________________________
 **6. EC2 Instances with User Data**
 
-In user_data_abhi.sh:
+In user_data_bharath.sh:
 
 ```sh
 #!/bin/bash
