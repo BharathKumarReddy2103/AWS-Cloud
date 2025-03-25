@@ -64,7 +64,7 @@ Prefer using the command line? You can also identify resources using the **AWS C
 aws configure
 ```
 
-o Provide your:
+Provide your:
 
 o Access key
 
