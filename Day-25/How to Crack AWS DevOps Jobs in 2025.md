@@ -66,7 +66,11 @@ Understanding the job market is essential. Every DevOps role can have a differen
 
 •	Docker & Kubernetes
 
-•	Jenkins or GitLab CI/CD
+• Ansible
+
+• Shell scripting (Bash) or Python scripting
+
+•	Jenkins or GitLab CI/CD or GitHub Actions
 
 •	Terraform or CloudFormation
 
