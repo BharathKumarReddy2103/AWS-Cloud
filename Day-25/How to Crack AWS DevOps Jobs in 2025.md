@@ -141,6 +141,3 @@ Cracking an AWS DevOps job isn’t about chasing certifications or watching hund
 
 By following these principles, you’ll not only become job-ready but also stand out during interviews and technical discussions.
 ________________________________________
-**Open for Contributions**:
-
-This guide is part of a growing GitHub repository aimed at helping engineers break into DevOps and Cloud roles. If you’d like to contribute tips, sample projects, or corrections, feel free to submit a PR or open an issue.
